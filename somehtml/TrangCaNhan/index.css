@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+header {
+    height:  339px;
+    width:  945px;
+    background-image: url(https://scontent.fhan4-3.fna.fbcdn.net/v/t39.30808-6/269949272_2923613847951280_3539094152861479647_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=e3f864&_nc_ohc=sWsoa7I3XhoAX_9tQNK&_nc_ht=scontent.fhan4-3.fna&oh=00_AT_ZOGtzk9JbieR9vn57EbCj7Ia8Qw38IgwYqTXyTud3xg&oe=61ED7207);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background
+}
+.btn {
+    position:relative;
+    left: 510px;
+    top: 300px;
+    border-radius: 4px;
+    width: 167px;
+    height: 38px;
+    padding:0px;
+}
