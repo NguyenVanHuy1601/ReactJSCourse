@@ -1,0 +1,110 @@
+#p1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+}
+#p2 {
+    font-style: italic;
+    color: #FF4;
+}
+#p3 {
+    font-variant: small-caps;
+}
+#p4 {
+    font-weight: 900;
+}
+p {
+    font-size: 40px;
+    direction:initial;
+    letter-spacing: 2px;
+    word-spacing: 20px;
+    text-indent: 30px;
+    text-align: center;
+    text-decoration: underline ;
+    color: lightsalmon;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+a{
+    text-decoration: none;
+}
+div {
+    display: inline-block;
+    width: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    border: 2px dotted blue;
+}
+.block {
+    width: 100px;
+    height: 100px;
+}
+.bg-yellow {
+    background-color: yellow;
+}
+.block {
+    overflow: auto;
+} */
+text shadow
+.text-shadow{
+    text-shadow: violet 2px 2px 4px;
+}
+.btn {
+    box-shadow: violet 2px 2px 4px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100%;
+    height: 90vh;
+    background-image: url("./image/bg.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:left;
+    background-attachment: fixed;
+}
+.border{
+    margin-top: 11px ;
+    border: 2px dotted blue;
+    border-left: 10px solid red;
+}
+h2 {
+    display: block;
+    color: sandybrown;
+    padding: 0px;
+    margin-top: 10px;
+    border: 3px solid rebeccapurple;
+}
+.display {
+    display: inline-block;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+}
+.div1 {
+    float:right;
+    display: inline-block;
+    color: chartreuse;
+    width: 30%;
+}
+.div2 {
+    float: right;
+    display: inline-block;
+    width: 70%;
+    background-color: chartreuse;
+}
+.div2 img{
+    width:300px;
+}
+.div3 {
+    float: left;
+    color:cyan;
+}
+.container::after{
+    display: block;
+    content: "";
+    clear: both;
+}

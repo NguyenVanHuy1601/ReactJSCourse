@@ -1,0 +1,91 @@
+/* div {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+} */
+@media only all and (min-width:500px) and (max-width:600px){
+    div {
+        background-color: green;
+    }
+}
+@media only all and (max-width:500px){
+    div {
+        border : 2px dotted red;
+    }
+}   
+.block {
+    top: 30px;
+    left: 30px;
+}
+/* .relative{
+    position: rela;
+} */
+.absolute{
+    position: absolute;
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    top:20px;
+    left: 50px;
+}
+.container {
+    width:400px;
+    height: 400px;
+    position: relative;
+    background-color: red;
+}
+.calling {
+    position:fixed ;
+    bottom: 30px;
+    right: 30px;
+}
+.transform {
+    width: 100px;
+    height: 100px;
+    background-color: burlywood;
+    /* transform: translate(50px, 50px); */
+    /* transform: rotate(15deg) */
+    
+}
+.transform:hover{
+    transform: scale(2) rotate(45deg) translate(50px, 50px);
+    transition: transform 3s;
+}
+.search{
+    width: 30px;
+
+}
+.search:focus {
+    transition: width ease-in 3s 3s, background-color 3s;
+    width: 300px;
+    background-color: yellow;
+}
+@keyframes dance {
+    0% {
+        top: 0px;
+        left:0px;
+    }
+    25% {
+        top: 0px;
+        left:300px;
+    }
+    50% {
+        top: 300px;
+        left: 300px;
+    }
+    75% {
+        top:300px;
+        left:0px;
+    }
+    100% {
+        top: 0px;
+        left:0px;
+    }
+}
+.animation {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: chartreuse;
+    animation: dance 3s ease-in-out 0s infinite reverse backwards;
+}

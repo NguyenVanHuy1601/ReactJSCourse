@@ -1,0 +1,64 @@
+/* /* .red-color {
+    color: red;
+}
+.container div p:first-child{
+    color: red;
+}
+.container div p:last-child{
+    color: yellow;
+}
+.container div p:nth-child(2){
+    color: violet;
+} */
+/* .container div p:nth-last-child(2){
+    color: red;
+}
+.container div p:first-of-type{
+    color: red;
+} */
+/* .container div p:only-child{
+    color: seagreen;
+}
+.username:focus {
+    width: 300px;
+}
+.gender:checked {
+    color: ;
+}
+a:visited{
+    color: goldenrod;
+}
+a:link{
+    color: red;
+}
+a:active{
+    color: yellow;
+}
+a:hover{
+    color: violet;
+}
+.para::first-line{
+    color: goldenrod;
+}
+.para::first-letter{
+    font-size: 30px;
+}
+.para::selection{
+     
+} */ 
+.container {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+}
+.block {
+    background-color: red;
+    width: 25%;
+    height: 25%;
+}
+.block div p {
+    font-size: 1.2em;
+}
+p {
+    color: #F00;
+}
