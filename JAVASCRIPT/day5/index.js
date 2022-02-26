@@ -86,3 +86,75 @@ console.log("marks:", marks);
 console.log("marks.join(" + ")", marks.join(" + "));
 console.log("marks.reverse()", marks.reverse());
 console.log("students: ", marks.join(" - "));
+
+/// callback
+function hello() {
+    console.log("hello");
+}
+
+function say(callback) {
+    callback();
+}
+console.log("hello", hello);
+say(hello);
+
+// find, filter, map, reduce, concat
+console.log("reactJSStudents: ", reactJSStudents);
+
+function findCondition(student) {
+    console.log("log Student: ", student);
+    return student.name == "Ngo Thi Thanh Tam";
+}
+let foundStudent = reactJSStudents.find(findCondition);
+console.log("foundStudent: ", foundStudent);
+// function find(callbackFind) {
+//     let foundStudent;
+//     for (let i = 0; i < reactJSStudents.length; i++) {
+//         if (callbackFind(reactJSStudents[i])) {
+//             foundStudent = reactJSStudents[i];
+//             break;
+//         }
+//     }
+//     return foundStudent;
+// }
+
+
+// console.log("Found: ", find(findCondition));
+// let foundStudent = reactJSStudents.find(findCondition);
+// console.log("foundStudent: ", foundStudent);
+
+// let huyStudent = reactJSStudents.find(
+//     (student) => student.name == "Nguyen Huy"
+// );
+// console.log("huyStudent: ", huyStudent);
+
+// let teachers = ["Huyen", "Tam", "Huy", "Linh"];
+// console.log(
+//     "findHuy: ",
+//     teachers.find(
+//         (teacher) => teacher == "Tam"
+//     ));
+
+reactJSStudents.push({
+    name: "Nguyen Tam",
+    mark: 10,
+});
+reactJSStudents.unshift({
+    name: "Nguyen Tuyet",
+    mark: 10,
+});
+reactJSStudents.push({
+    name: "Vo Huyen",
+    mark: 9,
+});
+
+console.log("reactJSStudent:", reactJSStudents);
+
+let students10Marks = reactJSStudents.filter(
+    (student, index) => student.mark == 10 && index >= 1
+);
+console.log("students10Marks: ", students10Marks);
+console.log("studentsHaveNguyen: ",
+    reactJSStudents.filter(
+        (student) => student.name.includes("Nguyen")
+    ));
