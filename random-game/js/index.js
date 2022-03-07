@@ -45,7 +45,7 @@ class SimpleGame extends React.Component {
         <div>
             <div className="header text-center jumbotron " >
                 <h1>Guessing random number</h1>
-                <p>I random a number , can you guess it???</p>
+                <p>I random a number from 1-100 , can you guess it???</p>
             </div>
             <div className="main">
                 <button onClick={this.newGame}>New Game</button><hr />
