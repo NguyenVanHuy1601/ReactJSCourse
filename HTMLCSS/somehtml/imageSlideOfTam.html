@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide ảnh Tâm </title>
+    <style>
+        .slide-show-container {
+            width: 300px;
+            height: 350px;
+        }
+        
+        .slide-show-wrapper {
+            position: relative;
+            max-width: 500px;
+            margin: auto;
+        }
+        
+        .slide-show-wrapper .slide-show {
+            width: 300px;
+            display: none;
+        }
+        
+        .slide-show-wrapper .slide-show img {
+            width: 100%;
+            animation: fade 2s ease 0s 1 forwards;
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .slide-show-wrapper .slide-show .number-text {
+            position: absolute;
+        }
+        
+        .left-arrow,
+        .right-arrow {
+            position: absolute;
+            padding: 20px;
+            margin-top: -25px;
+            top: 50%;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        
+        .left-arrow:hover,
+        .right-arrow:hover {
+            background-color: black;
+        }
+        
+        .right-arrow {
+            right: 0px;
+        }
+        
+        .slide-show-wrapper .slide-show .caption {
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .dot {
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            display: inline-block;
+            background-color: black;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-show-container">
+        <div class="slide-show-wrapper">
+            <div class="slide-show" style="display: block;">
+                <div class="number-text">1/3</div>
+                <img src="https://scontent.fhan4-3.fna.fbcdn.net/v/t1.15752-9/273911142_662654568518620_3076191038010334735_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=ae9488&_nc_ohc=MRFo7i6tR4UAX-0pfZ_&_nc_ht=scontent.fhan4-3.fna&oh=03_AVJooiwDerR7jYagyv9GrRy2wkL_Aita3k6P3c4f8TqE2A&oe=62462C6B"
+                    alt="img_mountains_wide" height="400px">
+                <div class="caption">Ngô Thị</div>
+            </div>
+
+            <div class="slide-show">
+                <div class="number-text">2/3</div>
+                <img src="https://scontent.fhan4-3.fna.fbcdn.net/v/t1.15752-9/260067245_1012128766178562_8092202222204437856_n.png?_nc_cat=100&ccb=1-5&_nc_sid=ae9488&_nc_ohc=bdofk7frD30AX9eCV47&_nc_ht=scontent.fhan4-3.fna&oh=03_AVK8YOHK1sVb70L5V4GAvcDa1yA4a_uqx4J6hxPG8OJMMg&oe=624597B5"
+                    alt="img_mountains_wide" height="400px">
+                <div class="caption">Thanh</div>
+            </div>
+
+            <div class="slide-show">
+                <div class="number-text">3/3</div>
+                <img src="https://scontent.fhan4-3.fna.fbcdn.net/v/t1.15752-9/258862921_938476020190566_756109796951113115_n.png?_nc_cat=103&ccb=1-5&_nc_sid=ae9488&_nc_ohc=tibqdpukksIAX8awUzz&_nc_ht=scontent.fhan4-3.fna&oh=03_AVISoquX1Jl15YxjyFVIKeKuCCBptWP5eqJw8Q2WeUvmSg&oe=62452CD5"
+                    alt="img_mountains_wide" height="400px">
+                <div class="caption">Tâm</div>
+            </div>
+
+            <a class="left-arrow js-left-arrow">&#10094;</a>
+            <a class="right-arrow js-right-arrow">&#10095;</a>
+        </div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <script>
+        let leftArrow = document.querySelector(".slide-show-container .slide-show-wrapper .left-arrow");
+        let rightArrow = document.querySelector(".slide-show-container .slide-show-wrapper .right-arrow");
+
+        let slideShows = document.querySelectorAll(
+            ".slide-show-container .slide-show-wrapper .slide-show"
+        );
+
+        console.log(leftArrow, rightArrow);
+
+        let currentIndex = 0;
+
+
+        leftArrow.addEventListener("click", () => {
+            currentIndex--;
+            if (currentIndex == -1)
+                currentIndex = 2;
+            updateSlideShow();
+        });
+        rightArrow.addEventListener("click", () => {
+            currentIndex++
+            if (currentIndex == 3)
+                currentIndex = 0;
+            updateSlideShow();
+        });
+
+        function updateSlideShow() {
+            for (let i = 0; i < slideShows.length; i++) {
+                slideShows[i].style.display = "none";
+            }
+            slideShows[currentIndex].style.display = "block";
+        }
+        let dotElems = document.querySelectorAll(".slide-show-container .dot");
+        dotElems[0].addEventListener("click", () => {
+            currentIndex = 0;
+            for (let j = 0; j < dotElems.length; j++) {
+                slideShows[j].style.display = "none";
+            }
+            slideShows[currentIndex].style.display = "block";
+        });
+
+        dotElems[1].addEventListener("click", () => {
+            currentIndex = 1;
+            for (let j = 0; j < dotElems.length; j++) {
+                slideShows[j].style.display = "none";
+            }
+            slideShows[currentIndex].style.display = "block";
+        });
+
+        dotElems[2].addEventListener("click", () => {
+            currentIndex = 2;
+            for (let j = 0; j < dotElems.length; j++) {
+                slideShows[j].style.display = "none";
+            }
+            slideShows[currentIndex].style.display = "block";
+        });
+    </script>
+</body>
+
+</html>
